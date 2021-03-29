@@ -1,0 +1,19 @@
+
+<ion-content>
+  <div class="container" *ngIf="!loginState">
+    <img src="/assets/logo.png" alt="logo"/>
+
+    <div style="color: red; text-align: left;width: 90%; margin-bottom: 5px;">{{emailError}}</div>
+    <input [(ngModel)]=typedEmail (focus)="inputChange()" placeholder="Digite seu e-mail"/>
+
+    <div style="color: red; text-align: left;width: 90%;margin-bottom: 5px;margin-top: 5px;">{{passwordError}}</div>
+    <input [(ngModel)]=typedPassword (focus)="inputChange()" type="password" placeholder="Senha"/>
+    <button (click)="login()">Continuar</button>
+  </div>
+  
+  <div class="container" *ngIf="loginState">
+    <p style="margin-bottom: 10px;">Olá, {{loggedinUser.name}}!</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+</ion-content>

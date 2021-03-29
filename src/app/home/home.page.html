@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img style="height: 55px;" slot="start" src="assets/logo.png">
+    
+     <p style="margin-left: 10px;">Início</p> 
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div style="display: flex; flex-wrap: wrap;justify-content: space-evenly;margin-top: 20px;">
+  <div class="grid-container" *ngFor="let product of products" >
+    <div>
+      <ion-card style="padding: 10px;width: 150px;">
+        <div class="img-div">
+          
+          <img [src]=getURL(product) >
+        </div>
+        
+        <div style="font-weight:bold;font-size: 20px;margin-top: 10px;border-top: 1px solid gray ;padding-top: 5px;">
+          R$ {{product.price}}
+        </div>
+        <div style="margin-top: 5px;font-size: 15px;">{{product.name}}</div>
+      </ion-card>
+        
+    </div>
+  </div>
+</div>
+  
+ 
+</ion-content>
+
+

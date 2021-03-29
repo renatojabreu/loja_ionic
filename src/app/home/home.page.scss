@@ -1,0 +1,29 @@
+ion-toolbar{
+  --background: #0056a6;
+  color: white;
+}
+
+.grid-container{
+  grid-column: 2;
+}
+
+ion-card{
+  padding: 0px;
+  margin: 5px;
+  height: 210px;
+}
+
+img{
+  max-height: 125px;
+  align-self: center;
+}
+
+.img-div{
+  text-align: center;
+  height: 130px;
+}
+
+p{
+  font-size: 20px;
+  
+}
